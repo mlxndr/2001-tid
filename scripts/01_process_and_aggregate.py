@@ -34,7 +34,7 @@ logger = logging.getLogger(__name__)
 class HansardProcessor:
     """Process and validate Hansard data with thematic headings."""
 
-    def __init__(self, hansard_file, thematic_file, output_file, use_sample=True):
+    def __init__(self, hansard_file, thematic_file, output_file, use_sample=False):
         """
         Initialize the processor.
 
