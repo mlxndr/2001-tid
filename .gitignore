@@ -24,10 +24,7 @@ wheels/
 *.egg
 
 # Data files
-data/processed/*.parquet
-data/processed/*.csv
 data/raw/*.csv
-*.parquet
 
 # Jupyter
 .ipynb_checkpoints
