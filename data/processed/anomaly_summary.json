@@ -1,0 +1,968 @@
+{
+  "metadata": {
+    "generated_at": "2025-11-15T21:55:08.644844",
+    "z_threshold": 2.0,
+    "min_observations": 10,
+    "total_anomalies": 16343,
+    "unique_tids_with_anomalies": 3556,
+    "unique_dates_with_anomalies": 142
+  },
+  "top_50_most_anomalous_days": [
+    {
+      "date": "2001-03-16",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "BF:24:e",
+      "count": 400,
+      "mean": 12.211678832116789,
+      "z_score": 11.350268481974016,
+      "abs_z_score": 11.350268481974016
+    },
+    {
+      "date": "2001-01-22",
+      "house": "Commons",
+      "level": "s4",
+      "tid": "AG:01:t:06",
+      "count": 471,
+      "mean": 13.57857142857143,
+      "z_score": 11.279440662298637,
+      "abs_z_score": 11.279440662298637
+    },
+    {
+      "date": "2001-03-16",
+      "house": "Commons",
+      "level": "s4",
+      "tid": "BF:24:e:02",
+      "count": 309,
+      "mean": 9.323529411764707,
+      "z_score": 11.211286093856973,
+      "abs_z_score": 11.211286093856973
+    },
+    {
+      "date": "2001-11-29",
+      "house": "Commons",
+      "level": "s4",
+      "tid": "AB:08:e:05",
+      "count": 356,
+      "mean": 27.15,
+      "z_score": 11.141513805216544,
+      "abs_z_score": 11.141513805216544
+    },
+    {
+      "date": "2001-11-02",
+      "house": "Commons",
+      "level": "s4",
+      "tid": "BG:04:b:03",
+      "count": 222,
+      "mean": 7.295454545454546,
+      "z_score": 11.090854034911235,
+      "abs_z_score": 11.090854034911235
+    },
+    {
+      "date": "2001-11-22",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "AZ:05:d",
+      "count": 293,
+      "mean": 13.102189781021897,
+      "z_score": 11.033136768076048,
+      "abs_z_score": 11.033136768076048
+    },
+    {
+      "date": "2001-01-22",
+      "house": "Commons",
+      "level": "s2",
+      "tid": "AI:04",
+      "count": 126,
+      "mean": 6.442028985507246,
+      "z_score": 11.013005556954381,
+      "abs_z_score": 11.013005556954381
+    },
+    {
+      "date": "2001-02-12",
+      "house": "Commons",
+      "level": "s5",
+      "tid": "BB:09:e:01:a",
+      "count": 414,
+      "mean": 13.343065693430656,
+      "z_score": 10.880322979942786,
+      "abs_z_score": 10.880322979942786
+    },
+    {
+      "date": "2001-07-17",
+      "house": "Commons",
+      "level": "s5",
+      "tid": "BJ:01:n:01:c",
+      "count": 132,
+      "mean": 6.733333333333333,
+      "z_score": 10.844244607931621,
+      "abs_z_score": 10.844244607931621
+    },
+    {
+      "date": "2001-02-12",
+      "house": "Commons",
+      "level": "s4",
+      "tid": "BB:09:e:01",
+      "count": 416,
+      "mean": 17.18705035971223,
+      "z_score": 10.776870699361984,
+      "abs_z_score": 10.776870699361984
+    },
+    {
+      "date": "2001-12-11",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "AA:03:h",
+      "count": 247,
+      "mean": 13.402877697841726,
+      "z_score": 10.711845586006614,
+      "abs_z_score": 10.711845586006614
+    },
+    {
+      "date": "2001-02-12",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "BB:12:e",
+      "count": 663,
+      "mean": 31.886524822695037,
+      "z_score": 10.706221278794226,
+      "abs_z_score": 10.706221278794226
+    },
+    {
+      "date": "2001-11-22",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "BC:12:a",
+      "count": 250,
+      "mean": 10.0,
+      "z_score": 10.69280725722395,
+      "abs_z_score": 10.69280725722395
+    },
+    {
+      "date": "2001-10-26",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "AA:04:c",
+      "count": 448,
+      "mean": 18.124087591240876,
+      "z_score": 10.560181015867677,
+      "abs_z_score": 10.560181015867677
+    },
+    {
+      "date": "2001-01-22",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "AI:04:b",
+      "count": 122,
+      "mean": 3.940677966101695,
+      "z_score": 10.524493018395525,
+      "abs_z_score": 10.524493018395525
+    },
+    {
+      "date": "2001-04-23",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "AA:08:a",
+      "count": 307,
+      "mean": 18.257142857142856,
+      "z_score": 10.496944965408632,
+      "abs_z_score": 10.496944965408632
+    },
+    {
+      "date": "2001-01-24",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "BK:06:c",
+      "count": 239,
+      "mean": 14.589928057553957,
+      "z_score": 10.391264148267735,
+      "abs_z_score": 10.391264148267735
+    },
+    {
+      "date": "2001-02-12",
+      "house": "Commons",
+      "level": "s4",
+      "tid": "BB:12:e:01",
+      "count": 441,
+      "mean": 13.884615384615385,
+      "z_score": 10.389832995720196,
+      "abs_z_score": 10.389832995720196
+    },
+    {
+      "date": "2001-11-29",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "AP:01:j",
+      "count": 294,
+      "mean": 34.50359712230216,
+      "z_score": 10.36839721168239,
+      "abs_z_score": 10.36839721168239
+    },
+    {
+      "date": "2001-04-23",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "AG:03:h",
+      "count": 105,
+      "mean": 5.8538461538461535,
+      "z_score": 10.358446680250191,
+      "abs_z_score": 10.358446680250191
+    },
+    {
+      "date": "2001-03-28",
+      "house": "Commons",
+      "level": "s4",
+      "tid": "AO:16:a:04",
+      "count": 95,
+      "mean": 5.1640625,
+      "z_score": 10.325473209782025,
+      "abs_z_score": 10.325473209782025
+    },
+    {
+      "date": "2001-11-29",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "AB:08:e",
+      "count": 730,
+      "mean": 64.04285714285714,
+      "z_score": 10.31734602638185,
+      "abs_z_score": 10.31734602638185
+    },
+    {
+      "date": "2001-12-17",
+      "house": "Commons",
+      "level": "s4",
+      "tid": "AO:18:b:03",
+      "count": 284,
+      "mean": 10.654135338345865,
+      "z_score": 10.305876242665544,
+      "abs_z_score": 10.305876242665544
+    },
+    {
+      "date": "2001-01-30",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "AO:21:h",
+      "count": 132,
+      "mean": 16.52517985611511,
+      "z_score": 10.294818252379418,
+      "abs_z_score": 10.294818252379418
+    },
+    {
+      "date": "2001-01-22",
+      "house": "Commons",
+      "level": "s4",
+      "tid": "AC:01:b:01",
+      "count": 114,
+      "mean": 5.0,
+      "z_score": 10.274891825759694,
+      "abs_z_score": 10.274891825759694
+    },
+    {
+      "date": "2001-10-26",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "AA:03:d",
+      "count": 352,
+      "mean": 17.12142857142857,
+      "z_score": 10.269245518401148,
+      "abs_z_score": 10.269245518401148
+    },
+    {
+      "date": "2001-02-27",
+      "house": "Commons",
+      "level": "s4",
+      "tid": "AL:05:c:02",
+      "count": 145,
+      "mean": 8.644444444444444,
+      "z_score": 10.252368056981608,
+      "abs_z_score": 10.252368056981608
+    },
+    {
+      "date": "2001-11-29",
+      "house": "Commons",
+      "level": "s2",
+      "tid": "AB:07",
+      "count": 149,
+      "mean": 9.654411764705882,
+      "z_score": 10.24863507087467,
+      "abs_z_score": 10.24863507087467
+    },
+    {
+      "date": "2001-01-22",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "AI:10:e",
+      "count": 1103,
+      "mean": 18.0,
+      "z_score": 10.238606096946029,
+      "abs_z_score": 10.238606096946029
+    },
+    {
+      "date": "2001-11-22",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "BB:06:i",
+      "count": 500,
+      "mean": 55.81428571428572,
+      "z_score": 10.16255204116983,
+      "abs_z_score": 10.16255204116983
+    },
+    {
+      "date": "2001-10-15",
+      "house": "Commons",
+      "level": "s4",
+      "tid": "AO:22:d:06",
+      "count": 113,
+      "mean": 6.767441860465116,
+      "z_score": 10.139315761553377,
+      "abs_z_score": 10.139315761553377
+    },
+    {
+      "date": "2001-11-29",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "AB:07:b",
+      "count": 135,
+      "mean": 7.907692307692308,
+      "z_score": 10.137592796180027,
+      "abs_z_score": 10.137592796180027
+    },
+    {
+      "date": "2001-01-08",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "BJ:01:j",
+      "count": 616,
+      "mean": 67.86524822695036,
+      "z_score": 10.116670579915302,
+      "abs_z_score": 10.116670579915302
+    },
+    {
+      "date": "2001-10-30",
+      "house": "Commons",
+      "level": "s4",
+      "tid": "BC:09:e:01",
+      "count": 113,
+      "mean": 4.629310344827586,
+      "z_score": 10.10941865379583,
+      "abs_z_score": 10.10941865379583
+    },
+    {
+      "date": "2001-10-24",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "AD:03:b",
+      "count": 614,
+      "mean": 55.42857142857143,
+      "z_score": 10.060502689098007,
+      "abs_z_score": 10.060502689098007
+    },
+    {
+      "date": "2001-12-10",
+      "house": "Commons",
+      "level": "s4",
+      "tid": "BJ:01:y:03",
+      "count": 509,
+      "mean": 29.287769784172664,
+      "z_score": 10.029229628585234,
+      "abs_z_score": 10.029229628585234
+    },
+    {
+      "date": "2001-01-30",
+      "house": "Commons",
+      "level": "s4",
+      "tid": "AO:21:h:01",
+      "count": 56,
+      "mean": 4.602941176470588,
+      "z_score": 10.024879180412885,
+      "abs_z_score": 10.024879180412885
+    },
+    {
+      "date": "2001-01-22",
+      "house": "Commons",
+      "level": "s2",
+      "tid": "AI:10",
+      "count": 1155,
+      "mean": 31.676258992805757,
+      "z_score": 10.010269733593251,
+      "abs_z_score": 10.010269733593251
+    },
+    {
+      "date": "2001-12-11",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "BK:08:l",
+      "count": 143,
+      "mean": 5.716814159292035,
+      "z_score": 10.005532238696098,
+      "abs_z_score": 10.005532238696098
+    },
+    {
+      "date": "2001-01-22",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "AJ:09:e",
+      "count": 589,
+      "mean": 26.02158273381295,
+      "z_score": 10.004836201344355,
+      "abs_z_score": 10.004836201344355
+    },
+    {
+      "date": "2001-01-24",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "BI:06:a",
+      "count": 248,
+      "mean": 12.522388059701493,
+      "z_score": 9.999503466864137,
+      "abs_z_score": 9.999503466864137
+    },
+    {
+      "date": "2001-04-27",
+      "house": "Commons",
+      "level": "s2",
+      "tid": "AF:07",
+      "count": 235,
+      "mean": 9.518796992481203,
+      "z_score": 9.997165404771941,
+      "abs_z_score": 9.997165404771941
+    },
+    {
+      "date": "2001-07-17",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "BF:23:b",
+      "count": 247,
+      "mean": 7.788617886178862,
+      "z_score": 9.981319028009906,
+      "abs_z_score": 9.981319028009906
+    },
+    {
+      "date": "2001-03-15",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "AN:07:a",
+      "count": 202,
+      "mean": 8.341269841269842,
+      "z_score": 9.979722976194031,
+      "abs_z_score": 9.979722976194031
+    },
+    {
+      "date": "2001-02-26",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "BG:07:d",
+      "count": 277,
+      "mean": 34.6241134751773,
+      "z_score": 9.975132160376525,
+      "abs_z_score": 9.975132160376525
+    },
+    {
+      "date": "2001-07-09",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "AH:02:a",
+      "count": 296,
+      "mean": 20.62142857142857,
+      "z_score": 9.91900096249823,
+      "abs_z_score": 9.91900096249823
+    },
+    {
+      "date": "2001-03-27",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "AR:42:c",
+      "count": 417,
+      "mean": 14.427536231884059,
+      "z_score": 9.909295035739921,
+      "abs_z_score": 9.909295035739921
+    },
+    {
+      "date": "2001-02-12",
+      "house": "Commons",
+      "level": "s2",
+      "tid": "BB:12",
+      "count": 857,
+      "mean": 96.41134751773049,
+      "z_score": 9.907983363690123,
+      "abs_z_score": 9.907983363690123
+    },
+    {
+      "date": "2001-10-15",
+      "house": "Commons",
+      "level": "s4",
+      "tid": "BK:08:v:04",
+      "count": 387,
+      "mean": 15.608695652173912,
+      "z_score": 9.905809078657065,
+      "abs_z_score": 9.905809078657065
+    },
+    {
+      "date": "2001-01-31",
+      "house": "Commons",
+      "level": "s3",
+      "tid": "AG:01:i",
+      "count": 75,
+      "mean": 4.666666666666667,
+      "z_score": 9.89452947145053,
+      "abs_z_score": 9.89452947145053
+    }
+  ],
+  "top_50_tids_by_anomaly_count": [
+    {
+      "tid": "s3:AA:04:b",
+      "anomaly_count": 12
+    },
+    {
+      "tid": "s1:ZA01",
+      "anomaly_count": 11
+    },
+    {
+      "tid": "s3:BK:06:f",
+      "anomaly_count": 11
+    },
+    {
+      "tid": "s3:BG:08:m",
+      "anomaly_count": 11
+    },
+    {
+      "tid": "s3:AN:05:m",
+      "anomaly_count": 11
+    },
+    {
+      "tid": "s3:AN:04:a",
+      "anomaly_count": 11
+    },
+    {
+      "tid": "s4:BB:07:a:02",
+      "anomaly_count": 11
+    },
+    {
+      "tid": "s4:BK:07:c:01",
+      "anomaly_count": 11
+    },
+    {
+      "tid": "s1:BC",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s1:AF",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s1:04",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s2:AV:05",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s2:AW:01",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s2:AB:10",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s2:AI:11",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s2:AP:03",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s2:AU:30",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s2:BK:05",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s2:AC:01",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s2:AX:22",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s2:AR:38",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s2:AS:06",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s2:AS:14",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s2:AG:01",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s2:BH:13",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s2:AB:01",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s2:04:10",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s2:BF:02",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s2:BH:02",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s3:AS:05:e",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s3:AT:15:j",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s3:AO:23:a",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s3:AP:03:c",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s3:BC:09:b",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s3:AR:42:b",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s3:BC:02:a",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s3:BK:08:p",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s3:BJ:01:z",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s3:AI:14:d",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s4:BD:04:e:01",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s4:BA:09:a:02",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s4:AX:16:a:03",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s4:BJ:01:m:02",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s4:AJ:09:e:03",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s4:AR:50:b:01",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s4:AS:13:c:01",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s5:BJ:01:n:01:d",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s5:BJ:01:s:03:a",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s5:BA:15:a:02:a",
+      "anomaly_count": 10
+    },
+    {
+      "tid": "s1:BJ",
+      "anomaly_count": 9
+    }
+  ],
+  "top_50_dates_by_anomaly_count": [
+    {
+      "date": "2001-06-13",
+      "anomaly_count": 540
+    },
+    {
+      "date": "2001-01-09",
+      "anomaly_count": 446
+    },
+    {
+      "date": "2001-03-12",
+      "anomaly_count": 377
+    },
+    {
+      "date": "2001-03-13",
+      "anomaly_count": 325
+    },
+    {
+      "date": "2001-06-14",
+      "anomaly_count": 321
+    },
+    {
+      "date": "2001-05-11",
+      "anomaly_count": 308
+    },
+    {
+      "date": "2001-01-15",
+      "anomaly_count": 292
+    },
+    {
+      "date": "2001-02-27",
+      "anomaly_count": 271
+    },
+    {
+      "date": "2001-10-04",
+      "anomaly_count": 268
+    },
+    {
+      "date": "2001-11-19",
+      "anomaly_count": 236
+    },
+    {
+      "date": "2001-01-08",
+      "anomaly_count": 231
+    },
+    {
+      "date": "2001-03-19",
+      "anomaly_count": 194
+    },
+    {
+      "date": "2001-03-21",
+      "anomaly_count": 182
+    },
+    {
+      "date": "2001-04-24",
+      "anomaly_count": 182
+    },
+    {
+      "date": "2001-01-17",
+      "anomaly_count": 171
+    },
+    {
+      "date": "2001-01-22",
+      "anomaly_count": 171
+    },
+    {
+      "date": "2001-01-29",
+      "anomaly_count": 162
+    },
+    {
+      "date": "2001-02-13",
+      "anomaly_count": 160
+    },
+    {
+      "date": "2001-03-14",
+      "anomaly_count": 158
+    },
+    {
+      "date": "2001-04-23",
+      "anomaly_count": 153
+    },
+    {
+      "date": "2001-04-03",
+      "anomaly_count": 152
+    },
+    {
+      "date": "2001-10-19",
+      "anomaly_count": 152
+    },
+    {
+      "date": "2001-11-20",
+      "anomaly_count": 150
+    },
+    {
+      "date": "2001-11-01",
+      "anomaly_count": 149
+    },
+    {
+      "date": "2001-02-28",
+      "anomaly_count": 144
+    },
+    {
+      "date": "2001-12-11",
+      "anomaly_count": 143
+    },
+    {
+      "date": "2001-11-13",
+      "anomaly_count": 143
+    },
+    {
+      "date": "2001-10-23",
+      "anomaly_count": 139
+    },
+    {
+      "date": "2001-01-10",
+      "anomaly_count": 137
+    },
+    {
+      "date": "2001-12-10",
+      "anomaly_count": 137
+    },
+    {
+      "date": "2001-11-12",
+      "anomaly_count": 134
+    },
+    {
+      "date": "2001-06-26",
+      "anomaly_count": 133
+    },
+    {
+      "date": "2001-11-29",
+      "anomaly_count": 133
+    },
+    {
+      "date": "2001-07-10",
+      "anomaly_count": 132
+    },
+    {
+      "date": "2001-03-28",
+      "anomaly_count": 131
+    },
+    {
+      "date": "2001-10-16",
+      "anomaly_count": 131
+    },
+    {
+      "date": "2001-04-02",
+      "anomaly_count": 129
+    },
+    {
+      "date": "2001-10-29",
+      "anomaly_count": 128
+    },
+    {
+      "date": "2001-12-03",
+      "anomaly_count": 127
+    },
+    {
+      "date": "2001-03-06",
+      "anomaly_count": 126
+    },
+    {
+      "date": "2001-07-17",
+      "anomaly_count": 125
+    },
+    {
+      "date": "2001-10-22",
+      "anomaly_count": 125
+    },
+    {
+      "date": "2001-10-30",
+      "anomaly_count": 125
+    },
+    {
+      "date": "2001-03-20",
+      "anomaly_count": 123
+    },
+    {
+      "date": "2001-04-09",
+      "anomaly_count": 123
+    },
+    {
+      "date": "2001-11-26",
+      "anomaly_count": 119
+    },
+    {
+      "date": "2001-10-24",
+      "anomaly_count": 118
+    },
+    {
+      "date": "2001-03-27",
+      "anomaly_count": 118
+    },
+    {
+      "date": "2001-01-30",
+      "anomaly_count": 117
+    },
+    {
+      "date": "2001-09-14",
+      "anomaly_count": 117
+    }
+  ],
+  "date_ranges_with_most_anomalies": [
+    {
+      "center_date": "2001-01-17",
+      "anomaly_count_7day_window": 1477,
+      "anomaly_count_single_day": 171
+    },
+    {
+      "center_date": "2001-06-21",
+      "anomaly_count_7day_window": 1438,
+      "anomaly_count_single_day": 84
+    },
+    {
+      "center_date": "2001-06-20",
+      "anomaly_count_7day_window": 1437,
+      "anomaly_count_single_day": 92
+    },
+    {
+      "center_date": "2001-06-22",
+      "anomaly_count_7day_window": 1423,
+      "anomaly_count_single_day": 27
+    },
+    {
+      "center_date": "2001-06-14",
+      "anomaly_count_7day_window": 1418,
+      "anomaly_count_single_day": 321
+    },
+    {
+      "center_date": "2001-06-19",
+      "anomaly_count_7day_window": 1375,
+      "anomaly_count_single_day": 51
+    },
+    {
+      "center_date": "2001-01-18",
+      "anomaly_count_7day_window": 1332,
+      "anomaly_count_single_day": 86
+    },
+    {
+      "center_date": "2001-03-20",
+      "anomaly_count_7day_window": 1324,
+      "anomaly_count_single_day": 123
+    },
+    {
+      "center_date": "2001-01-16",
+      "anomaly_count_7day_window": 1306,
+      "anomaly_count_single_day": 112
+    },
+    {
+      "center_date": "2001-03-19",
+      "anomaly_count_7day_window": 1265,
+      "anomaly_count_single_day": 194
+    }
+  ]
+}
