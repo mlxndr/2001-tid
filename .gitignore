@@ -26,6 +26,7 @@ wheels/
 # Data files
 data/processed/*.parquet
 data/processed/*.csv
+data/processed/*.json
 data/raw/*.csv
 *.parquet
 
