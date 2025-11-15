@@ -318,6 +318,133 @@ class HansardProcessor:
         logger.info(f"  Rows: {len(self.hansard_df):,}")
         logger.info(f"  Columns: {len(output_columns)}")
 
+    def create_hierarchical_aggregations(self, compression='snappy'):
+        """
+        Create hierarchical aggregations at different TID levels.
+
+        Creates 6 parquet files:
+        - daily_full_tid: Aggregated by date, house, full tid
+        - daily_s1: Aggregated by date, house, s1
+        - daily_s2: Aggregated by date, house, s1+s2
+        - daily_s3: Aggregated by date, house, s1+s2+s3
+        - daily_s4: Aggregated by date, house, s1+s2+s3+s4
+        - daily_s5: Aggregated by date, house, s1+s2+s3+s4+s5
+
+        Args:
+            compression: Compression algorithm to use
+        """
+        logger.info("\n" + "=" * 80)
+        logger.info("CREATING HIERARCHICAL AGGREGATIONS")
+        logger.info("=" * 80)
+
+        output_dir = self.output_file.parent
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+        # Store file sizes for reporting
+        file_sizes = {}
+
+        # 1. Daily Full TID aggregation
+        logger.info("\n1. Creating daily_full_tid aggregation...")
+        agg1 = self.hansard_df.groupby(
+            ['date', 'house', 'tid', 's1', 's2', 's3', 's4', 's5'],
+            dropna=False
+        ).agg({'tot': 'sum'}).reset_index()
+        agg1 = agg1.rename(columns={'tot': 'total_count'})
+
+        output1 = output_dir / 'daily_full_tid.parquet'
+        agg1.to_parquet(output1, compression=compression, index=False)
+        file_sizes['daily_full_tid'] = output1.stat().st_size / 1024
+        logger.info(f"   ✓ Saved: {output1.name}")
+        logger.info(f"   Rows: {len(agg1):,}, Size: {file_sizes['daily_full_tid']:.2f} KB")
+
+        # 2. Daily S1 aggregation
+        logger.info("\n2. Creating daily_s1 aggregation...")
+        agg2 = self.hansard_df[self.hansard_df['s1'].notna()].groupby(
+            ['date', 'house', 's1'],
+            dropna=False
+        ).agg({'tot': 'sum'}).reset_index()
+        agg2 = agg2.rename(columns={'tot': 'total_count'})
+
+        output2 = output_dir / 'daily_s1.parquet'
+        agg2.to_parquet(output2, compression=compression, index=False)
+        file_sizes['daily_s1'] = output2.stat().st_size / 1024
+        logger.info(f"   ✓ Saved: {output2.name}")
+        logger.info(f"   Rows: {len(agg2):,}, Size: {file_sizes['daily_s1']:.2f} KB")
+
+        # 3. Daily S2 aggregation
+        logger.info("\n3. Creating daily_s2 aggregation...")
+        agg3 = self.hansard_df[self.hansard_df['s2'].notna()].groupby(
+            ['date', 'house', 's1', 's2'],
+            dropna=False
+        ).agg({'tot': 'sum'}).reset_index()
+        agg3 = agg3.rename(columns={'tot': 'total_count'})
+
+        output3 = output_dir / 'daily_s2.parquet'
+        agg3.to_parquet(output3, compression=compression, index=False)
+        file_sizes['daily_s2'] = output3.stat().st_size / 1024
+        logger.info(f"   ✓ Saved: {output3.name}")
+        logger.info(f"   Rows: {len(agg3):,}, Size: {file_sizes['daily_s2']:.2f} KB")
+
+        # 4. Daily S3 aggregation
+        logger.info("\n4. Creating daily_s3 aggregation...")
+        agg4 = self.hansard_df[self.hansard_df['s3'].notna()].groupby(
+            ['date', 'house', 's1', 's2', 's3'],
+            dropna=False
+        ).agg({'tot': 'sum'}).reset_index()
+        agg4 = agg4.rename(columns={'tot': 'total_count'})
+
+        output4 = output_dir / 'daily_s3.parquet'
+        agg4.to_parquet(output4, compression=compression, index=False)
+        file_sizes['daily_s3'] = output4.stat().st_size / 1024
+        logger.info(f"   ✓ Saved: {output4.name}")
+        logger.info(f"   Rows: {len(agg4):,}, Size: {file_sizes['daily_s3']:.2f} KB")
+
+        # 5. Daily S4 aggregation
+        logger.info("\n5. Creating daily_s4 aggregation...")
+        agg5 = self.hansard_df[self.hansard_df['s4'].notna()].groupby(
+            ['date', 'house', 's1', 's2', 's3', 's4'],
+            dropna=False
+        ).agg({'tot': 'sum'}).reset_index()
+        agg5 = agg5.rename(columns={'tot': 'total_count'})
+
+        output5 = output_dir / 'daily_s4.parquet'
+        agg5.to_parquet(output5, compression=compression, index=False)
+        file_sizes['daily_s4'] = output5.stat().st_size / 1024
+        logger.info(f"   ✓ Saved: {output5.name}")
+        logger.info(f"   Rows: {len(agg5):,}, Size: {file_sizes['daily_s4']:.2f} KB")
+
+        # 6. Daily S5 aggregation (full hierarchy)
+        logger.info("\n6. Creating daily_s5 aggregation...")
+        agg6 = self.hansard_df[self.hansard_df['s5'].notna()].groupby(
+            ['date', 'house', 's1', 's2', 's3', 's4', 's5'],
+            dropna=False
+        ).agg({'tot': 'sum'}).reset_index()
+        agg6 = agg6.rename(columns={'tot': 'total_count'})
+
+        output6 = output_dir / 'daily_s5.parquet'
+        agg6.to_parquet(output6, compression=compression, index=False)
+        file_sizes['daily_s5'] = output6.stat().st_size / 1024
+        logger.info(f"   ✓ Saved: {output6.name}")
+        logger.info(f"   Rows: {len(agg6):,}, Size: {file_sizes['daily_s5']:.2f} KB")
+
+        # Summary report
+        logger.info("\n" + "=" * 80)
+        logger.info("AGGREGATION SUMMARY")
+        logger.info("=" * 80)
+
+        total_size_kb = sum(file_sizes.values())
+        original_size_kb = self.output_file.stat().st_size / 1024
+
+        logger.info(f"\nOriginal validated_raw.parquet: {original_size_kb:.2f} KB")
+        logger.info(f"\nAggregated files:")
+        for name, size in file_sizes.items():
+            pct = (size / original_size_kb * 100) if original_size_kb > 0 else 0
+            logger.info(f"  {name:20s}: {size:8.2f} KB ({pct:5.1f}% of original)")
+
+        logger.info(f"\nTotal aggregated size: {total_size_kb:.2f} KB")
+        logger.info(f"Compression ratio: {(total_size_kb / original_size_kb * 100):.1f}% of original")
+        logger.info("=" * 80)
+
     def process(self):
         """Run the complete processing pipeline."""
         logger.info("=" * 80)
@@ -345,6 +472,9 @@ class HansardProcessor:
 
         # Step 6: Save to parquet
         self.save_to_parquet(compression='snappy')
+
+        # Step 7: Create hierarchical aggregations
+        self.create_hierarchical_aggregations(compression='snappy')
 
         logger.info("\n" + "=" * 80)
         logger.info("PROCESSING COMPLETE")
