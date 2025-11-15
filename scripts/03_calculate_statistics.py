@@ -96,31 +96,44 @@ class AnomalyDetector:
         Returns:
             DataFrame with z-scores and anomaly flags
         """
-        # Merge observations with statistics
-        df_with_stats = df.merge(stats, on=tid_cols, how='inner')
+        # Merge observations with statistics (LEFT join to keep all observations)
+        df_with_stats = df.merge(stats, on=tid_cols, how='left')
 
-        # Calculate z-scores
-        df_with_stats['z_score'] = (
-            (df_with_stats['total_count'] - df_with_stats['mean_count']) /
-            df_with_stats['std_count']
+        # Mark which observations have sufficient data for analysis
+        df_with_stats['has_baseline'] = df_with_stats['mean_count'].notna()
+
+        # Calculate z-scores (only for observations with baseline statistics)
+        df_with_stats['z_score'] = np.nan
+        mask = df_with_stats['has_baseline']
+        df_with_stats.loc[mask, 'z_score'] = (
+            (df_with_stats.loc[mask, 'total_count'] - df_with_stats.loc[mask, 'mean_count']) /
+            df_with_stats.loc[mask, 'std_count']
         )
 
-        # Flag anomalies
-        df_with_stats['is_anomaly'] = (
-            np.abs(df_with_stats['z_score']) > self.z_threshold
+        # Flag anomalies (only for observations with valid z-scores)
+        df_with_stats['is_anomaly'] = False
+        df_with_stats.loc[mask, 'is_anomaly'] = (
+            np.abs(df_with_stats.loc[mask, 'z_score']) > self.z_threshold
         )
 
         # Select and rename columns for output
         output_cols = ['date', 'house'] + tid_cols + [
             'total_count', 'mean_count', 'std_count', 'median_count',
-            'p95_count', 'z_score', 'is_anomaly'
+            'p95_count', 'num_occurrences', 'z_score', 'is_anomaly', 'has_baseline'
         ]
 
         result = df_with_stats[output_cols].copy()
         result = result.rename(columns={'total_count': 'count'})
 
-        logger.info(f"  Calculated z-scores for {len(result):,} observations")
-        logger.info(f"  Found {result['is_anomaly'].sum():,} anomalies ({result['is_anomaly'].mean()*100:.1f}%)")
+        # Log statistics
+        total_obs = len(result)
+        analyzed_obs = result['has_baseline'].sum()
+        anomalies = result['is_anomaly'].sum()
+
+        logger.info(f"  Total observations: {total_obs:,}")
+        logger.info(f"  Analyzed (>= {self.min_occurrences} occurrences): {analyzed_obs:,} ({analyzed_obs/total_obs*100:.1f}%)")
+        logger.info(f"  Not analyzed (rare TIDs): {total_obs - analyzed_obs:,} ({(total_obs - analyzed_obs)/total_obs*100:.1f}%)")
+        logger.info(f"  Anomalies detected: {anomalies:,} ({anomalies/analyzed_obs*100:.1f}% of analyzed)" if analyzed_obs > 0 else "  No observations to analyze")
 
         return result
 
